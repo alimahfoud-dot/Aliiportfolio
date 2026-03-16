@@ -1,0 +1,242 @@
+
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(#F8F5FC,#324051);
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    marquee-container {
+  overflow: hidden;
+  width: 80px;   /* حجم الحاوية */
+  white-space: nowrap;
+  display: inline-block;
+  
+}
+
+
+.marquee-text {
+    display: inline-block;
+  position: relative;
+  right: 100%;   
+  /* البداية خارج الشاشة */
+}
+}
+
+/* ---------- Typing Quote ---------- */
+.typing-quote {
+  display: inline-block;
+  min-width: 260px;
+  white-space: nowrap;
+  position: relative;
+  margin-left: 25px;
+}
+
+.typing-quote::after {
+  content: "|";
+  position: absolute;
+  margin-left: 4px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* ---------- Header / Navbar ---------- */
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background-color: #324051;
+    box-shadow: 0 0 30px 10px #324051;
+    border:solid 0.5px #324051;
+    border-radius: 2px;
+}
+
+.navbar-brand{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: white;
+}
+
+.navbar-brand img{
+    border-radius: 20%;
+    margin-right: 30px;
+}
+
+nav a{
+    margin:0 10px;
+    text-decoration:none;
+    color: white;
+}
+
+.nav :hover{
+    background: linear-gradient(#F8F5FC,#324051);
+    height: 40px;
+    cursor: pointer;
+    background-size:20px;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    color:slategrey;
+}
+
+.hero h1{
+    font-size:40px;
+    color: #2e4057;
+}
+
+/* ---------- Buttons & Links ---------- */
+.btn{
+    border-color: #2e4057;
+    color:white;
+    padding:12px 25px;
+    border:none;
+    border-radius:8px;
+    text-decoration:none;
+    background-color:#324051;
+    box-shadow: 0 0 10px 2px rgba(46, 64, 87);
+    margin-left: 25px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.links a{
+    display: flex;
+    color: white;
+    font-family: sans-serif;
+    font-weight: normal;
+    line-height: 1.8px;
+    text-decoration: none;
+    border-color: white;
+    margin-left: 25px;
+}
+
+.links a:hover{
+    color: white;
+    background-color:#534ef4;
+}
+
+.link1, .link2, .link3, .ali {
+    background-color:#534ef4;
+    text-decoration:none;
+    padding:12px 25px;
+    border-radius:8px;
+    color:#F8F5FC;
+    box-shadow:0 0 10px 5px white;
+    border: none;
+}
+
+
+/* ---------- Image ---------- */
+.image img{
+    width: 100%;
+    max-width: 600px;
+    height: 500px;
+    border-radius: 50%;
+    border: solid 4px #324051;
+    box-shadow:0 0 20px 5px #2e4057;
+}
+
+/* ---------- About / Projects / Services ---------- */
+.about, .projects, .services{
+    padding: 60px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.projects{
+    background:#bbbdbe4f;
+    border: solid 1px;
+    border-radius: 15px;
+}
+
+.project-grid, .service-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+
+.card{
+    background:#324051;
+    padding:20px;
+    border-radius:10px;
+    box-shadow: 0 30px 10px rgba(0,0,0,0.1);
+    color: #F8F5FC;
+}
+
+.services{
+    background: #bbbdbe4f;
+    border: solid 1px #F8F5FC;
+    border-radius: 15px;
+}
+
+/* ---------- Footer ---------- */
+footer{
+    text-align:center;
+    padding:20px;
+}
+
+/* ==================== */
+/* Media Queries Ready */
+/* ==================== */
+
+/* Tablets */
+@media screen and (max-width: 992px) {
+    .project-grid, .service-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    header{
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px 20px;
+    }
+
+    nav a{
+        margin: 5px 0;
+    }
+
+    .hero{
+        flex-direction: column;
+        padding: 50px 20px;
+        text-align: center;
+    }
+}
+
+/* Phones */
+@media screen and (max-width: 600px) {
+    .project-grid, .service-grid{
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1{
+        font-size: 28px;
+    }
+
+    h2{ font-size: 24px; }
+    h3{ font-size: 20px; }
+    p{ font-size: 0.9rem; }.btn, .link1, .link2, .link3, .ali{
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        margin-left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .hero, .about, .projects, .services{
+        padding: 30px 10px;
+    }
+}
